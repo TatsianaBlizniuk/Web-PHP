@@ -1,0 +1,85 @@
+<html>                                                                  
+<head>                                                                
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript">   
+$(document).ready(function(){
+
+//Пишите код здесь
+//1
+$("#pmtog").css("color","green");
+
+//2
+$("p.pr1").css("color","red");
+
+//3
+$("#buttonorange:button").css("color","orange");
+
+//4
+$(".pmb1,.pmb2,.pmb3").css("color","blue");
+
+//5
+$("div#wrap1 .pmtobr").css("color","brown");
+
+//6
+$("#border").css("borderStyle","solid");
+
+//7
+$("div#iwrap #red").css("color","red");
+
+});                                           
+</script>                                                          
+</head>
+<body> 
+<p><b>Каждое задание отмеченное цифрой должно быть выполнено с помощью одной jQuery команды.</b></p>
+<hr />
+<p><b>1.</b></p>                                                        
+<p id="pmtog">Покрасьте меня в зеленый цвет.</p>
+
+
+<p><b>2.</b></p>
+<h3 class="pr1">Мой цвет не должен быть изменен.</h3>
+<p class="pr1">Покрасьте меня в красный цвет.</p>
+
+
+<p><b>3.</b></p>
+<input id="buttonorange" type="button" value="Покрасьте меня в оранжевый" />
+<br /><br />
+<input type="text" value="Мой цвет не должен быть изменен"/>
+<br /><br />
+<input type="submit" value="Мой цвет изменять не нужно"/>
+<br /><br />
+
+
+<p><b>4.</b></p>
+<p class="pmb1">Покрасьте меня в синий.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmb2">Покрасьте меня в синий.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmb3">Покрасьте меня в синий.</p>
+
+
+<p><b>5.</b></p>
+<div id="wrap1">
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmtobr">Покрасьте меня в коричневый.</p>
+</div>
+<p class="pmtobr">Мой цвет не должен быть изменен.</p>
+
+
+<p><b>6. Отобразите рамку вокруг третьего (слева) изображения. (Используйте команду css("borderStyle","solid")</b></p>
+<img src="img/mounting3.jpg" style="width:200px;">
+<img src="img/mounting1.jpg" style="width:200px;">
+<img id="border" src="img/mounting2.jpg" style="width:200px;">
+
+
+<p><b>7. </b></p>
+<div id="iwrap">
+<input id="red" type="button" value="Покрасьте меня в красный" />
+<br /><br />
+<input type="text" value="Мой цвет не должен быть изменен"/>
+<br /><br />
+<input id="red" type="submit" value="Покрасьте меня в красный"/>
+</div>
+</body>
+</html>
