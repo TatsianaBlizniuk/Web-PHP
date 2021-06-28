@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+
+    <script type='text/javascript'>
+
+        function summer() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("res").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", "summer.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <script type='text/javascript'>
+
+        function autumn() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("res").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", "autumn.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <script type='text/javascript'>
+
+        function winter() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("res").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", "winter.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <script type='text/javascript'>
+
+        function spring() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("res").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", "spring.txt", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+<!--
+Пишите код здесь 
+-->
+<input type='button' value='Summer' onclick='summer()'/>
+<input type='button' value='Autumn' onclick='autumn()'/>
+<input type='button' value='Winter' onclick='winter()'/>
+<input type='button' value='Spring' onclick='spring()'/>
+<div id="res"></div>
+</body>
+</html>

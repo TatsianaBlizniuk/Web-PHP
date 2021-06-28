@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <script type="text/javascript">
+        function fun1() {
+            var var1 = document.getElementById("v1").value;
+            var var2 = document.getElementById("v2").value;
+            var var3 = document.getElementById("v3").value;
+            var xhttp1 = new XMLHttpRequest();
+            xhttp1.onreadystatechange = function () {
+                if (xhttp1.readyState == 4 && xhttp1.status == 200) {
+                    document.getElementById("res1").innerHTML = xhttp1.responseText;
+                }
+            }
+            xhttp1.open("GET", "testfile.php?var1=" + var1 + "&var2=" + var2 + "&var3=" + var3, true);
+            xhttp1.send();
+        }
+    </script>
+<body>
+<input type="text" id="v1"/>
+<input type="text" id="v2"/>
+<input type="text" id="v3"/>
+
+
+<input type="button" id="but1" value="script" onclick="fun1()"/>
+
+<div id="res1"></div>
+</body>
+</html>

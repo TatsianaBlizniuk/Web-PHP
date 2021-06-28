@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type='text/javascript'>
+
+function start1(){  
+   xhttp=new XMLHttpRequest();
+   xhttp.open('GET','bookshop.json',true);
+   xhttp.send();
+   xhttp.onreadystatechange=function(){
+      if (xhttp.readyState==4){ 
+         var json=eval( '('+xhttp.responseText+')' );
+         document.getElementById('wrap').style.display='block';
+         document.getElementById('res1').innerHTML=json.bookbase[3].author;
+		 
+      }
+   }
+   }
+   
+   function start2(){  
+   xhttp=new XMLHttpRequest();
+   xhttp.open('GET','bookshop.json',true);
+   xhttp.send();
+   xhttp.onreadystatechange=function(){
+      if (xhttp.readyState==4){ 
+         var json=eval( '('+xhttp.responseText+')' );
+         document.getElementById('wrap2').style.display='block';
+         document.getElementById('res2').innerHTML=json.bookbase[5].title;
+		 document.getElementById('res3').innerHTML=json.bookbase[6].title;
+		 document.getElementById('res4').innerHTML=json.bookbase[7].title;
+      }
+   }
+   }
+   
+   function start3(){  
+   xhttp=new XMLHttpRequest();
+   xhttp.open('GET','bookshop.json',true);
+   xhttp.send();
+   xhttp.onreadystatechange=function(){
+      if (xhttp.readyState==4){ 
+         var json=eval( '('+xhttp.responseText+')' );
+         document.getElementById('wrap3').style.display='block';
+		 document.getElementById('res5').innerHTML = json.bookbase[3].quantity+json.bookbase[6].quantity+
+		 json.bookbase[9].quantity+json.bookbase[12].quantity;
+      }
+   }
+   }
+</script>
+
+</head>
+<body>
+<input type='button' value='Значение 4 тэга author' onclick='start1()'/>
+<input type='button' value='Значения 6, 7 и 8 тэга title' onclick='start2()'/>
+<input type='button' value='Сумма содержимого 4, 7, 10 и 13 тэга quantity' onclick='start3()'/>
+<br /> <br />
+<div id='res'></div>
+<div id='wrap' style='display:none;'>
+<hr />
+<p>Автор: <b><span id='res1'></span></b></p>
+
+<hr />
+</div>
+<div id='wrap2' style='display:none;'>
+<hr />
+<p>6 <b><span id='res2'></span></b></p>
+<p>7 <b><span id='res3'></span></b></p>
+<p>8 <b><span id='res4'></span></b></p>
+
+<hr />
+</div>
+<div id='wrap3' style='display:none;'>
+<hr />
+<p>Сумма= <b><span id='res5'></span></b></p>
+<hr />
+</div>
+</body>
+</html>
